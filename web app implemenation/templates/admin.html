@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PAYMENT</title>
+	<style type="text/css">
+		.qr-code-generator {
+width: 500px;
+margin: 0 auto;
+}
+
+.qr-code-generator * {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+#qrcode {
+width: 128px;
+height: 128px;
+margin: 0 auto;
+text-align: center;
+}
+
+#qrcode a {
+font-size: 0.8em;
+}
+
+.qr-url, .qr-size {
+padding: 0.5em;
+border: 1px solid #ddd;
+border-radius: 2px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.qr-url {
+width: 79%;
+}
+
+.qr-size {
+width: 20%;
+}
+
+.generate-qr-code {
+display: block;
+width: 100%;
+margin: 0.5em 0 0;
+padding: 0.25em;
+font-size: 1.2em;
+border: none;
+cursor: pointer;
+background-color: #e5554e;
+color: #fff;
+}
+	</style>
+</head>
+<body>
+	<div class="qr-code-generator">
+
+<input type="text" class="qr-url" placeholder="URL or Text">
+<input type="number" class="qr-size" value="128" min="20" max="500">
+
+<button class="generate-qr-code">Generate</button>
+
+<br>
+
+<div id="qrcode"></div>
+
+</div>
+<script type="text/javascript">
+	$('.generate-qr-code').on('click', function(){
+
+// Clear Previous QR Code
+$('#qrcode').empty();
+
+// Set Size to Match User Input
+$('#qrcode').css({
+'width' : $('.qr-size').val(),
+'height' : $('.qr-size').val()
+})
+
+// Generate and Output QR Code
+$('#qrcode').qrcode({width: $('.qr-size').val(),height: $('.qr-size').val(),text: $('.qr-url').val()});
+
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Park.AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+<!-- //web font -->
+</head>
+<body>
+  <!-- main -->
+   <form id="contactForm" action = "http://localhost:5000/result.html" method = "POST">
+  <div class="main-w3layouts wrapper">
+    <h1>Park.AI</h1>
+    <div class="main-agileinfo">
+      <div class="agileits-top">
+        <form action="#" method="post">
+          <input class="text" type="text" name="Username" placeholder="Username" required="">
+          <input class="text email" type="email" name="email" placeholder="Email">
+          
+  
+         
+            <div class="clear"> </div>
+          </div>
+          <input type="submit" value="SIGNUP">
+        </form>
+        
+      </div>
+    </div>
+
+    <ul class="colorlib-bubbles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</form>
+<script type="text/javascript">
+  window.onload = function() {
+
+  // Check for LocalStorage support.
+  if (localStorage) {
+
+    // Add an event listener for form submissions
+    document.getElementById('contactForm').addEventListener('submit', function() {
+      // Get the value of the name field.
+      var name = document.getElementById('Username').value;
+      localStorage.setItem('Username', Username);
+      var email = document.getElementById('email').value;
+      localStorage.setItem('email', Username);
+    });
+
+  }
+
+</script>
+  <!-- //main -->
+</body>
+</html>
